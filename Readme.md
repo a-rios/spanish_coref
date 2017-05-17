@@ -1,12 +1,12 @@
-# install dependencies
+### Installation 
 
-## FREELING
+## FreeLing
 
 `git clone https://github.com/TALP-UPC/freeling`
 
 Installation (make sure to install from sources, headers are needed),  see: https://talp-upc.gitbooks.io/freeling-user-manual/content/installation.html
 
-### compile Freeling analyzer with crf output format for wapiti:
+compile Freeling analyzer with crf output format for wapiti:
 ```
 export $FREELING_INSTALLATION_DIR= path to you installation of FreeLing
 export $PARSING_PIPELINE_DIR= path to this package
@@ -32,7 +32,7 @@ export FREELINGSHARE=$FREELING_INSTALLATION_DIR/share/freeling
 once compiled, you can test the server:
 ```
 ./server_squoia -f $PARSING_PIPELINE_DIR/FreeLingModules/es_squoia.cfg  --server --port=$PORT 2> logtagging &
-echo "eso  es mi test" |./analyzer_client $PORT
+echo "eso es una prueba" |./analyzer_client $PORT
 ```
 
 Link server_squoia, analyzer_client and nec to the /bin folder (optional, if you do not link them, change the paths in es.cfg):
@@ -47,14 +47,14 @@ ln -s ../FreeLingModules/nec .
 For system wide use, either link client and server to somewhere in your $PATH (e.g. in `/usr/local/bin`), or add their location to $PATH
 
 
-## WAPITI
+## Wapiti
 
 https://wapiti.limsi.fr/
 
 follow installation instructions, then adapt path to wapiti in es.cfg
 
 
-## MALTPARSER
+## MaltParser
 
 http://www.maltparser.org/download.html
 
@@ -74,10 +74,12 @@ move binaries to ../bin:
 `mv MaltParserServer.class MPClient.class ../bin/`
 
 ## Perl modules required: 
+```
 Getopt::Long;
 Storable;
 File::Basename;
 File::Spec::Functions
+```
 
 parse with parse.pm:
 
