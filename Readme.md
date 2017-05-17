@@ -91,8 +91,8 @@ cd $PARSING_PIPELINE_DIR
 use `./parse.pm --help` to see input/output format options
 
 As an example for how to add co-reference annotations to your conll with corzu, see coref_example.sh
-Please reference this paper if you use the pipeline: 
 
+Please reference this paper if you use the pipeline: 
 ```
 @inproceedings{zora136447,
        booktitle = {15th Conference of the European Chapter of the Association for Computational Linguistics},
