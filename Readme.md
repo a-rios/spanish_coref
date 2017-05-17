@@ -91,3 +91,23 @@ cd $PARSING_PIPELINE_DIR
 use `./parse.pm --help` to see input/output format options
 
 As an example for how to add co-reference annotations to your conll with corzu, see coref_example.sh
+Please reference this paper if you use the pipeline: 
+
+Annotated corpora used in experiments in papers:
+
+https://aclweb.org/anthology/E/E17/E17-2104.pdf
+
+```
+@inproceedings{zora136447,
+       booktitle = {15th Conference of the European Chapter of the Association for Computational Linguistics},
+           month = {April},
+           title = {Co-reference Resolution of Elided Subjects and Possessive Pronouns in Spanish-English Statistical Machine Translation},
+          author = {Annette Rios and Don Tuggener},
+       publisher = {Association for Computational Linguistics},
+            year = {2017},
+           pages = {657--662},
+             url = {http://dx.doi.org/10.5167/uzh-136447}
+}
+```
+
+an annotated version of the news commentary 2011 corpus is available from https://github.com/a-rios/CorefMT
