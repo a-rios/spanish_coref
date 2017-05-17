@@ -62,7 +62,7 @@ follow installation instructions, see http://www.maltparser.org/install.html
 
 set maltPath in es.cfg to your installation of maltparser
 
-compile server-client modules ($MALTPARSER_DIR= path to your maltparser installtion):
+compile server-client modules ($MALTPARSER_DIR= path to your maltparser installation):
 
 ```
 cd $PARSING_PIPELINE_DIR/maltparser_tools/src 
