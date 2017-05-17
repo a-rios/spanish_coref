@@ -1,6 +1,6 @@
-### Installation 
+## Installation 
 
-## FreeLing
+### FreeLing
 
 `git clone https://github.com/TALP-UPC/freeling`
 
@@ -47,14 +47,14 @@ ln -s ../FreeLingModules/nec .
 For system wide use, either link client and server to somewhere in your $PATH (e.g. in `/usr/local/bin`), or add their location to $PATH
 
 
-## Wapiti
+### Wapiti
 
 https://wapiti.limsi.fr/
 
 follow installation instructions, then adapt path to wapiti in es.cfg
 
 
-## MaltParser
+### MaltParser
 
 http://www.maltparser.org/download.html
 
@@ -73,7 +73,7 @@ javac -cp $MALTPARSER_DIR/maltparser-1.8/maltparser-1.8.jar MaltParserServer.jav
 move binaries to ../bin:
 `mv MaltParserServer.class MPClient.class ../bin/`
 
-## Perl modules required: 
+### Perl modules required: 
 ```
 Getopt::Long;
 Storable;
