@@ -13,7 +13,7 @@ scripts=$parsing_pipeline_dir/scripts
 out_dir=$data_dir # replace with different output directory if needed
 
 # sentence splitting with moses script in Spanish does NOT work well with titles
-# if your data has lines with multiple sentences, but no single sentences over more than one lines
+# if your data has lines with multiple sentences, but no single sentences over more than one line
 # -> insert empty lines before using splitter to make sure titles are not inserted into the next sentence, e.g. with sed 's/$/\n/g'
 
 ###################
@@ -59,7 +59,7 @@ for file_parsed in $out_dir/*.parsed
    
    echo "file_coref is $file_coref"
     
-    ### check named entities against list of names/ common nouns that refer to persons (lists in corzu_es/data)
+    ### check named entities against list of names/common nouns that refer to persons (lists in corzu_es/data)
     if [ ! -s $file_names ]; then
 	echo "check names on $base_es"
 	## check if names/person list have been read and stored as perl hashes already
@@ -73,6 +73,7 @@ for file_parsed in $out_dir/*.parsed
     fi
     
     ### co-reference resolution
+    ### output files: .mables = markables, .ante_scores = scores of antecedent candidates for each pronoun, .chains = co-reference chains as lists
     if [ ! -s $file_coref ]; then
         echo "corzu coref on $base_es"
        (cd $corzu_dir && python extract_markables.py $file_names > $out_dir/$base_mables && python corzu_es.py $out_dir/$base_mables $file_names $file_coref)
